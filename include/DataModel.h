@@ -13,6 +13,9 @@
 #include "Utilities.h"
 
 #include <zmq.hpp>
+#include <FakeCambus.h>
+#include <LAPPDMoniterData.h>
+
 
 /**
 * \class DataModel
@@ -45,6 +48,9 @@ class DataModel {
 
   zmq::context_t* context; ///< ZMQ contex used for producing zmq sockets for inter thread,  process, or computer communication
 
+  FakeCambus* Cambus;
+  
+  LAPPDMoniterData MonData;
 
  private:
 

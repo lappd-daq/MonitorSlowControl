@@ -1,0 +1,19 @@
+# Stream
+
+Stream
+
+## Data
+
+Describe any data formats Stream creates, destroys, changes, analyzes, or its usage.
+
+
+
+
+## Configuration
+
+Describe any configuration variables for Stream.
+
+```
+param1 value1
+param2 value2
+```
