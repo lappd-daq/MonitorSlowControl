@@ -42,3 +42,15 @@ bool LAPPDMoniterData::Receive(zmq::socket_t* sock){
   return true;
 
 }
+
+
+bool LAPPDMoniterData::Print(){
+
+  std::cout<<"leak="<<leak<<std::endl;
+  std::cout<<"light="<<light<<std::endl;
+  std::cout<<"temp="<<temp<<std::endl;
+  std::cout<<"HV="<<HV<<std::endl;
+  std::cout<<"LV="<<LV<<std::endl;
+  std::cout<<"power="<<power<<std::endl;
+
+}

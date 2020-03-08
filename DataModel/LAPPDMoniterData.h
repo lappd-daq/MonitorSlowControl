@@ -3,6 +3,7 @@
 
 #include "zmq.hpp"
 #include <SerialisableObject.h>
+#include <iostream>
 
 class LAPPDMoniterData : public SerialisableObject{
 
@@ -20,7 +21,7 @@ class LAPPDMoniterData : public SerialisableObject{
   bool LV;
   bool power;
 
-  bool Print(){};
+  bool Print();
 
  private:
  
