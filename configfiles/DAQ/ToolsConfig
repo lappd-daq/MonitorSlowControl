@@ -1,3 +1,4 @@
 #test1 DummyTool configfiles/DummyToolConfig
 #test2 DummyTool configfiles/DummyToolConfig
 StreamReceive StreamReceive configfiles/DAQ/StreamReceiveConfig
+SetSend SetSend  configfiles/DAQ/SetSendConfig

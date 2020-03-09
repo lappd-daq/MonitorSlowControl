@@ -12,7 +12,7 @@ bool Poll::Initialise(std::string configfile, DataModel &data){
 
   long time_sec=0;
 
-  m_variables.Get("Period",time_sec);
+  if(!m_variables.Get("Period",time_sec)) time_sec=1;
 
   period=boost::posix_time::seconds(time_sec);
   last=boost::posix_time::second_clock::local_time();
@@ -39,6 +39,8 @@ bool Poll::Execute(){
     m_data->MonData.HV =  m_data->Cambus->GetHV();
     m_data->MonData.LV =  m_data->Cambus->GetLV();
     m_data->MonData.power =  m_data->Cambus->GetPower();
+
+    last=boost::posix_time::second_clock::local_time();
 
   }
 

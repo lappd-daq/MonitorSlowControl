@@ -10,7 +10,7 @@ bool StreamReceive::Initialise(std::string configfile, DataModel &data){
 
   m_data= &data;
 
-  m_variables.Get("Port",m_port);
+  if(!m_variables.Get("Port",m_port)) m_port=4444;
 
   sock=new zmq::socket_t(*(m_data->context), ZMQ_SUB);
   std::stringstream tmp;
@@ -30,7 +30,7 @@ bool StreamReceive::Initialise(std::string configfile, DataModel &data){
 bool StreamReceive::Execute(){
 
   
-  zmq::poll(&items[0], 1, 0);
+  zmq::poll(&items[0], 1, 100);
 
   if ((items [0].revents & ZMQ_POLLIN)) {
 

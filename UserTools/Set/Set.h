@@ -29,8 +29,10 @@ class Set: public Tool {
 
  private:
 
-
-
+  zmq::socket_t* sock;
+  zmq::pollitem_t items[1];
+  int m_port;
+  bool ret;
 
 
 };

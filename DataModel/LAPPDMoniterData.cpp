@@ -51,6 +51,6 @@ bool LAPPDMoniterData::Print(){
   std::cout<<"temp="<<temp<<std::endl;
   std::cout<<"HV="<<HV<<std::endl;
   std::cout<<"LV="<<LV<<std::endl;
-  std::cout<<"power="<<power<<std::endl;
+  std::cout<<"power="<<power<<std::endl<<std::endl;
 
 }
